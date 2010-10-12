@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<style>
+body {font-family: Helvetica, Arial, sans-serif}
+</style>
+</head>
+<body>
+%%(message)s
+
+<h3>Search database</h3>
+To search the database, send an email to %(address)s and enter your keywords after a question mark in the subject.  Use quotes to search exact phrases.<br>
+<pre>
+Subject: ? engel
+Subject: ? engel micro
+Subject: ? "search for this exact phrase"
+</pre>
+You will receive an email summary with attachments containing search results.<br>
+You can fold and unfold sections in the attachments.<br>
+<pre>
+Subject: ?
+</pre>
+For instructions, send an email with a question mark in the subject.<br>
+<br>
+
+<h3>Store remarks and documents</h3>
+To file an email as a remark in the database, send an email to %(address)s and include one or more of the following directives in the body of your email.<br>
+<pre>
+##AGREEMENT engel
+##A engel
+##COMPANY engel
+##CM engel
+##CONTACT engel
+##CN engel
+##MPROJECT engel
+##MP engel
+##MTARGET engel
+##MT engel
+##PATENT engel
+##P engel
+##TECHNOLOGY engel
+##T engel
+</pre>
+You no longer need to specify exact matches.  If there is more than one match, you will receive an email listing the matches.  The remark will only be added if there is exactly one match.<br>
+<pre>
+##T engel micro
+##T "joint patent"
+</pre>
+Any attachments in the email will be embedded as a document to the specified link in the database.  If there is more than one link, then the attachments will be duplicated for each link.<br>
+<br>
+
+<h3>Reserve a case number</h3>
+To reserve a case number for a technology, send an email to %(address)s and enter the title of the new technology after an equal sign in the subject.<br>
+<pre>
+Subject: = The Title of a New Technology
+</pre>
+<br>
+
+<h3>Retrieve documents</h3>
+To retrieve documents, send an email to %(address)s and enter the documentIDs after the keyword DOC in the subject.<br>
+<pre>
+Subject: DOC 28882
+Subject: DOC 28882 39484
+Subject: DOC 28882 39484
+</pre>
+Separate multiple documentIDs with spaces.  You can find documentIDs by running a search on the database as described earlier.<br>
+<br>
+
+</body>
+</html>

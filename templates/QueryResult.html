@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>%(title)s</title>
+<style>
+/* General */
+a {text-decoration: none}
+a:link {text-decoration: none; color: darkblue; background: white}
+a:visited {text-decoration: none; color: darkblue; background: white}
+a:active {text-decoration: none; color: darkblue; background: white}
+a:hover {text-decoration: none; color: white; background: darkblue}
+
+/* Font */
+.normalFONT {font-family: Helvetica, Arial, sans-serif}
+
+/* Hover */ 
+.linkOFF {color: darkblue; background-color: white} 
+.linkON {color: white; background-color: darkblue}
+
+/* Tab */
+.tabOFF {color: black; background-color: white} 
+.tabON {color: white; background-color: black}
+.tab_ {display: none}
+
+/* Parts */
+#navigation {position: fixed; left: 0; right: 0; top: 0; height: 29%%; overflow: auto}
+#content {position: fixed; left: 0; right: 0; bottom: 0; height: 70%%; overflow: auto; border-top: black solid 10px}
+#whitespace {height: 100em}
+.header {color: white; background: darkgreen; font-size: 1.5em}
+.information {border: black solid thin; margin-top: 1em; margin-bottom: 1em}
+.informationField {width: 15em; font-weight: bold}
+.remark {height: 25em; border: solid thin black; overflow: auto}
+.sub {margin-left: 2em}
+
+/* Visibility */
+.show {margin-left: 2em; display: block}
+.hide {margin-left: 2em; display: none}
+.focus {background-color: lightyellow}
+
+/* Table */
+td {margin-right: 2em; vertical-align: top}
+td.caseNumber {width: 15em}
+td.title {width: 30em}
+td.status {width: 10em}
+td.leadInventor {width: 10em}
+td.date {width: 10em}
+td.patentApplicationType {width: 10em}
+td.patentSerialNumber {width: 10em}
+td.amount {width: 10em; text-align: right}
+td.project {width: 10em}
+td.companyName {width: 20em}
+td.contactName {width: 20em}
+</style>
+<script>
+function getID(obj) {return /\d+/.exec(obj.id)[0]}
+function getNumber(obj) {return /\d+/.exec(obj)[0]}
+var last_focus;
+function toggle(obj, className) {
+    if (last_focus) {
+        last_focus.className = last_focus.className.replace('focus', '');
+    }
+    last_focus = document.getElementById(obj.id + '_');
+    if (!last_focus) return;
+    if (!className) {
+        className = (/show/.exec(last_focus.className)) ? 'hide': 'show';
+    }
+    last_focus.className = className + ' focus';
+}
+function on(field) {field.className = field.className.replace('OFF', 'ON')}
+function off(field) {field.className = field.className.replace('ON', 'OFF')}
+var last_obj;
+function go(obj) {
+    if (last_obj) 
+        toggle(last_obj, 'hide');
+    toggle(obj, 'show');
+    window.location = '#' + obj.id + '_';
+    last_obj = obj;
+}
+</script>
+</head>
+<body class=normalFONT>
+
+<div id=navigation>
+%(outline)s
+</div>
+
+<div id=content>
+%(content)s
+<div id=whitespace></div>
+</div>
+
+</body>
+</html>

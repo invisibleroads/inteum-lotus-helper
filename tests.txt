@@ -1,0 +1,20 @@
+test emailing from unauthorized email
+test that emailing ? will return help
+
+test emailing a query with multiple terms
+test emailing a query with phrases enclosed in quotation marks
+
+test retrieving multiple documents
+test reserving case number
+
+test emailing remark for agreement
+test emailing remark for company
+test emailing remark for contact
+test emailing remark for marketing project
+test emailing remark for marketing target
+test emailing remark for patent
+test emailing remark for technology
+
+test emailing remark with no matches
+test emailing remark with multiple matches
+test emailing remark with multiple attachments
