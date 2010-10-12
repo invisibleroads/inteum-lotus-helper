@@ -1,6 +1,6 @@
 Query and update an Inteum MSSQL database via email using Lotus Notes
 =====================================================================
-Inteum-Lotus-Helper is a mail-based interface to searching and updating Inteum's underlying MSSQL database via Lotus Notes.  Inteum is a software system for managing intellectual property.  Authorized users send commands via email to search the database, retrieve documents, store remarks with attached documents and reserve case numbers.  Inteum-Lotus-Helper runs as a process in the background, listening to its assigned Lotus Notes mailbox for new email messages containing commands.
+Inteum-Lotus-Helper is an interface for searching and updating Inteum's underlying MSSQL database via email commands.  Authorized users send commands via email to search the database, retrieve documents, store remarks with attached documents and reserve case numbers.  Inteum-Lotus-Helper runs as a process in the background, listening to its assigned Lotus Notes mailbox for new email messages containing commands.
 
 
 Install dependencies
