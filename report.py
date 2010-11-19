@@ -6,7 +6,7 @@ import datetime
 import collections
 # Import custom modules
 import config
-import mail_store_imap
+import imap
 import mail
 import store
 
@@ -187,7 +187,7 @@ for contactPack in contactPacks:
 # For each reportRecipient,
 for reportHost, reportEmail, reportUsername, reportPassword in config.reportRecipients:
     # Login to mail server
-    imapStore = mail_store_imap.Store(reportHost, reportUsername, reportPassword)
+    imapStore = imap.Store(reportHost, reportUsername, reportPassword)
     # Send mail with attachments
     messageWhen = datetime.datetime.now()
     message = mail.buildMessage(

@@ -1,3 +1,4 @@
+'Routines for formatting email'
 # Import system modules
 import string
 import re
