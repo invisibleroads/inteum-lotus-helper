@@ -64,7 +64,7 @@ class Processor(object):
                 # If there was an error,
                 except RemarkError, error: 
                     # Save it
-                    errors.append('%s<br>%s' % (cgi.escape(line), error))
+                    errors.append('%s<br>%s' % (cgi.escape('> ' + line), error))
         # If there were errors
         if errors:
             # Write response
