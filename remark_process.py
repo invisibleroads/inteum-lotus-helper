@@ -1,6 +1,7 @@
 'Methods for detecting and processing messages intended as remarks'
 # Import system modules
 import collections
+import cgi
 import re
 import os
 # Import custom modules
@@ -11,7 +12,7 @@ import query_process
 
 
 # Set patterns
-pattern_remark = re.compile(r'##([\S]*)\s+(.*)')
+pattern_remark = re.compile(r'##([\S]+)\s+(.*)')
 
 
 class Processor(object):
@@ -63,7 +64,7 @@ class Processor(object):
                 # If there was an error,
                 except RemarkError, error: 
                     # Save it
-                    errors.append(str(error))
+                    errors.append('%s<br>%s' % (cgi.escape(line), error))
         # If there were errors
         if errors:
             # Write response
