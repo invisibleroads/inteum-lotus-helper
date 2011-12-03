@@ -1,0 +1,36 @@
+release 1.3.1 of helper
+    revise daily report
+        add agreements
+        delete previous daily reports
+        sort daily report by case number
+        remove dependency on lotus notes
+        make report more user friendly
+            * simplify spreadsheet for use on blackberry
+
+        add patent number and patent issue date
+
+    add getDocumentBundle to relevant getBundle methods
+    retroactively patch tco-helpers's remarks in inteum
+    store FROM address for messages in logfile so user has examples of Lotus Notes email identifiers
+    remove dependency on lotus notes
+    investigate issue of incomplete body retrieval if messages are sent plaintext through Lotus Notes web interface
+    add easier way to create default.cfg
+        draft instructions for configuring tco helper
+
+    consider restoring desktop app for tco-helper
+    draft troubleshooting guide
+    show lead inventor in html summary
+    generalize auto-numbering for A, B, X, etc
+    think of a better error processing mechanism [11/28/2011 11pm]
+        think how to be more helpful if it can't find matching thing when adding remarks
+        consider storing original email when processing correction replies
+        consider web-based error resolution interface
+        show legal reference number in response for duplicate resolution
+
+    consider paying attention to second cross-referenced field for more accurate remark posting
+    investigate a better way to autogenerate ID numbers when adding records in Inteum
+    look for get next primary key stored procedure
+    consider reading directive information from subject line
+    consider implementing wildcards for remark directives ##P 06A0061*US* or ##P 06A0061*PCT*
+    consider making directives more flexibles with spaces after double hash
+    fix UnicodeDecodeError for formatRemarkResults(): attachmentNames
