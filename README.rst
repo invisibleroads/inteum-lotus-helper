@@ -23,7 +23,7 @@ Check that the tool works properly
 ----------------------------------
 1. Send an email to the mailbox with a question mark as the subject.
 
-2. Run ``python go.py - 1``.
+2. Run ``python go.py -1``.
 
 
 Schedule the tool to run regularly
